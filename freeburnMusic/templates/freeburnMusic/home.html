@@ -1,0 +1,252 @@
+{% extends "freeburnMusic/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div id="home" class="row Carousel">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="/static/images/slides/g7.jpg" style="width:100%" alt="Profile image example">
+                    <div class="caption-text">Mzansi's Hottest Music Contest</div>
+                    <div class="caption-button">
+                        <a href="#details" class="button button-light">Find Out More</a>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/static/images/slides/g29.jpg" style="width:100%">
+                    <div class="caption-text">Battle to be on the Billboards</div>
+                    <div class="caption-button">
+                        <a href="#prizes" class="button button-light">See Prizes</a>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="/static/images/slides/g4.jpg" style="width:100%">
+                    <div class="caption-text">Live Your Music Dream</div>
+                    <div class="caption-button">
+                        <a href="#sign-up" class="button button-light">Apply Now</a>
+                    </div>
+                </div>
+
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+        </div>
+        <div id="details" class="row details">
+            <div class="col-lg-1">
+                <div class="details-text center">
+                    <h2>Freeburn Music League Format</h2>
+                    <p>
+                        Freeburn Music League is a reality music competition that is for independent professional and aspiring musicians.
+                        Any artist that is unsigned, or signed for distribution but remains independent is eligible to apply for a spot to
+                        compete in this 40 week league contest.
+                    </p>
+                    <p>
+                        The top 500 successful applicants will then compete for a qualification spot in the qualifiers to be in the top 40
+                        of their specific genre/category.
+
+                    </p>
+                    <p>
+                        The remaining 300 will be bubbling under with a chance to eliminate a fellow competitors for a spot in the top 40 out
+                        of the 100 eligible players in each category.
+                    </p>
+                    <p>
+                        The league has 5 categories. Applicants must know their music and understand what genre and subgenre their music
+                        style/ability falls under.
+                    </p>
+                    <p>
+                        To win the contestants must then accumulate points throughout the season via plays , fan following,  weekly challenges,
+                        votes, hits and downloads. Their weekly total score times the algorithm formula will determine the total points and their
+                        ranking on the Billboard chart.
+                    </p>
+                    <p>
+                        With season progress, some top artists will qualify to compete on Freeburn Live, which scores more points from weekly live
+                        performance competition, whilst all top 40 artists will be part of the Freeburn Music Reality Show throughout the season
+                        which will be streamed weekly.
+                    </p>
+                    <p>
+                        Artists must compete as a team. Meaning each team must compose of 3-5 members including the main applicant. Team members will
+                        assist with roles related to PR, Styling, Management of Competition Tasks/duties and Personal Assistance. This is advisable
+                        but not an obligation.
+                    </p>
+                    <p>
+                        To increase your chances of winning the Billboard Championship or the Genre Championship, artists must fight to be at the top
+                        of their genre or the top 100.
+                    </p>
+                    <p>
+                        If eliminated from either the premium live contest or from the top 40. Acts must fight through the various ways of gathering
+                        points to get back into the top 40 or premier League.
+                    </p>
+                </div>
+                <div class="details-image center">
+                    <img class="icon" alt="leaderboard" src="/static/images/icons/leaderboard.png" />
+                </div>
+            </div>
+
+            <div id="prizes" class="row prizes">
+                <h1 class="title center">Prizes</h1>
+                <div class="details-text center">
+                    <p>
+                        All this to earn your share in Mzansi's biggest competition prizes.
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <div class="col-lg-1">
+                        <div class="prize-icon center">
+                            <img class="icon" alt="studio" src="/static/images/prizes/STUDIO.png" />
+                        </div>
+                        <div class="prize-text">
+                            <h2>Studio Equipment</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <div class="prize-icon center">
+                            <img class="icon" alt="video" src="/static/images/prizes/CARS.png" />
+                        </div>
+                        <div class="prize-text">
+                            <h2>Crew Bus and 3 Cars</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <div class="prize-icon center">
+                            <img class="icon" alt="video" src="/static/images/prizes/CASH.png" />
+                        </div>
+                        <div class="prize-text">
+                            <h2>R1 million cash plus R200 000x5 for the genre top acts</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sign-up" class="row application">
+            <h1 class="title">Sign Up</h1>
+            <div class="form col-lg-1 center">
+                <form action="">
+                    <div class="col-lg-2">
+                        <label for="fname">Artist Name</label>
+                        <input type="text" id="fname" name="fname" class="w3-input">
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">Contact Number</label>
+                        <input type="text" id="lname" name="lname" class="w3-input">
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">Email Address</label>
+                        <input type="text" id="lname" name="lname" class="w3-input">
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">RSA ID Number</label>
+                        <input type="text" id="lname" name="lname" class="w3-input">
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">Nearest City</label>
+                        <select name="city" id="city">
+                            <option value="select city" disabled selected hidden>Choose a city</option>
+                            <option value="Johannesburg">Johannesburg</option>
+                            <option value="Pretoria">Pretoria</option>
+                            <option value="Mafikeng">Mafikeng</option>
+                            <option value="Durban">Durban</option>
+                            <option value="Bloemfontein">Bloemfontein</option>
+                            <option value="Nelspruit">Nelspruit</option>
+                            <option value="Kimberley">Kimberley</option>
+                            <option value="Polokwane">Polokwane</option>
+                            <option value="Cape Town">Cape Town</option>
+                            <option value="East London">East London</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">Select Your Category</label>
+                        <select name="artist-category" id="artist-category">
+                            <option value="select city" disabled selected hidden>Choose one category</option>
+                            <option value="solo">Solo</option>
+                            <option value="duo">Duo</option>
+                            <option value="band">Band</option>
+                            <option value="group">Group</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">Select Your Genre</label>
+                        <select name="genre" id="genre" onchange="sub_genres()">
+                            <option value="select sub-genre" disabled selected hidden>Choose your sub-genre</option>
+                            <option value="dance">Dance</option>
+                            <option value="rnb_soul">R&B Soul</option>
+                            <option value="traditional">Traditional</option>
+                            <option value="reggae">Reggae</option>
+                            <option value="hiphop">Hip Hop</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2">
+                        <label for="lname">Sub Genre</label>
+                        <select name="subgenre" id="subgenre"></select>
+                    </div>
+                    <div class="col-lg-2">
+                        <span></span>
+                        <label for="confirmation" class="checkbox-container">
+                            I confirm that I am not signed road major record label and have full rights,
+                            ownership and control of the music I shall compete with. I also agree to the rules,
+                            terms and conditions of this league as well as policies of the competition. I will
+                            adhere to these for as long as I am an active participant of the Freeburn Music League.
+                            <input id="confirmation" name="confirm" type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="col-lg-1">
+                        <a id="btnUpload" class="link">Upload your music and photo</a>
+                    </div>
+                    <button type="submit" class="button button-mid">Submit</button>
+                </form>
+                <div id="uploadModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <form class="modal-form" action="" novalidate>
+                            <div class="modal-header">
+                                <h2>Upload</h2>
+                                <span class="close">&times;</span>
+                            </div>
+                            <div class="modal-body col-lg-1">
+                                <div class="col-lg-1">
+                                    <div class="col-lg-1">
+                                        <span>Photo</span>
+                                        <input type="file" id="photoFile" class="button button-light center"
+                                            name="photo" accept=".jpg,.png" />
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="col-lg-1">
+                                        <span>Track 1</span>
+                                        <input type="file" id="mp3File" class="button button-light center"
+                                            name="Track 1" accept=".mp3,.wav,.aac" />
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <span>Track 2</span>
+                                        <input type="file" id="mp3File" class="button button-light center"
+                                            name="Track 2" accept=".mp3,.wav,.aac" />
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <span>Track 3</span>
+                                        <input type="file" id="mp3File" class="button button-light center"
+                                            name="Track 3" accept=".mp3,.wav,.aac" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a id="btnCancel" class="button button-light" href="#"><span>Cancel</span></a>
+                                <input id="btnSave" type="submit" class="button button-light" value="Save" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rules" class="row">
+            <a href="#" class="button button-light">Download Rules</a>
+        </div>
+    </div>
+{% endblock %}

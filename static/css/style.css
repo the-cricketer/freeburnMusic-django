@@ -1,0 +1,391 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    color: #FFFFFF;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer {
+    padding: 10px 0;
+    text-align: center;
+}
+
+label {
+    text-align: end;
+    padding: 8px 25px 8px 0;
+    font-size: 16px;
+}
+
+select {
+    color: black;
+}
+
+a {
+    text-align: center;
+}
+
+.title {
+    margin: 50px 0 0 0;
+}
+
+h2 {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-items: center;
+    height: fit-content;
+    width: 100%;
+}
+
+.button {
+    padding: 5px;
+    font-size: 16px;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    align-self: center;
+}
+
+.button:hover {
+    cursor: pointer;
+    font-size: 18px;
+    width: 256px;
+}
+
+.button-light {
+    border: white solid 2px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.button-mid {
+    background: #FFFFFF;
+    border: #333 solid 2px;
+    color: #333;
+}
+
+.align-right {
+    justify-self: end;
+    margin: 5px;
+}
+
+.align-left {
+    justify-self: start;
+    text-align: start;
+    margin: 5px;
+}
+
+.center {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+/***************Checkbox**********************/
+
+/* Hide the browser's default checkbox */
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: black 1px solid;
+}
+
+/* On mouse-over, add a grey background color */
+
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #ee482e;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/****************Navigation*******************/
+
+ul {
+    list-style-type: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(26, 26, 26);
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    z-index: 1000;
+}
+
+li {
+    width: 100px;
+    display: inline-flex;
+    text-align: center;
+}
+
+li a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 27.5px;
+}
+
+#site-logo-link {
+    width: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.menu-icon {
+    font-size: 50px;
+}
+
+li a:hover {
+    background-color: #ee482e;
+}
+
+.active {
+    background-color: #ee482e;
+}
+
+/*Mobile Nav*/
+
+/* Style the navigation menu */
+
+.mobile-nav {
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+
+#myLinks {
+    display: none;
+    z-index: 2000;
+    width: 100%;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 60px;
+    background-color: #ee482e;
+}
+
+.nav-item {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+/* Style navigation menu links */
+
+.mobile-nav a {
+    color: whitesmoke;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 30px;
+    display: block;
+}
+
+/* Style the hamburger menu */
+
+.mobile-nav a.icon {
+    background: #333;
+    display: block;
+    position: absolute;
+    width: 80px;
+    right: 0;
+    top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+
+.mobile-nav a:hover {
+    background-color: #ee482e;
+    color: #333;
+}
+
+/* Style the active link (or home/logo) */
+
+.active {
+    background-color: #ee482e;
+    color: white;
+}
+
+/**********Carousel***********/
+
+* {
+    box-sizing: border-box
+}
+
+/* Fading animation */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3.5s;
+    animation-name: fade;
+    animation-duration: 3.5;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/**************************Details Section********************************/
+
+#details {
+    background-color: #ee482e;
+    color: white;
+}
+
+#prizes {
+    background-color: #333;
+    color: #FFFFFF;
+}
+
+.prize-text {
+    justify-self: center;
+    align-self: center;
+    text-align: start;
+    margin: 5px;
+    font-size: 24px;
+}
+
+#media {
+    background-color: #f39443;
+    color: #FFFFFF;
+}
+
+/**************************Form Section********************************/
+
+.modal-form {
+    height: 100%;
+}
+
+#sign-up {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* Add Animation */
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 55px;
+        opacity: 1
+    }
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/**************************FAQ Section********************************/
+
+.faq {
+    background-color: #333;
+}
+
+/**************************Rules Section********************************/
+
+#rules {
+    background-color: #ee482e;
+    height: 100px;
+}
